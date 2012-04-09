@@ -1,99 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="at.tomtasche.reader" android:versionCode="24"
-	android:versionName="1.3.2" android:installLocation="auto">
+    package="at.tomtasche.reader"
+    android:versionCode="1"
+    android:versionName="1.0" >
 
-	<application android:icon="@drawable/icon" android:label="@string/app_name"
-		android:hardwareAccelerated="true" android:allowBackup="true">
-		
-		<activity android:name="at.enajat.david.android.filechooser.FileChooser"
-			android:label="@string/chooser_name" android:configChanges="orientation|keyboardHidden">
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="15" />
 
-			<intent-filter>
-				<action android:name="android.intent.action.GET_CONTENT" />
-				<category android:name="android.intent.category.OPENABLE" />
-				<category android:name="android.intent.category.DEFAULT" />
-				<data android:mimeType="application/vnd.oasis.opendocument.*" />
-			</intent-filter>
-		</activity>
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">
+        <activity
+            android:name=".OpenDocumentActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-		<activity android:name=".ui.activity.OpenOfficeActivity"
-			android:label="@string/app_name">
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
-			<intent-filter>
-				<action android:name="android.intent.action.VIEW" />
-				<category android:name="android.intent.category.DEFAULT" />
-				<data android:mimeType="application/vnd.oasis.opendocument.text" />
-			</intent-filter>
-
-			<intent-filter>
-				<action android:name="android.intent.action.VIEW" />
-				<category android:name="android.intent.category.BROWSABLE" />
-				<data android:mimeType="application/vnd.oasis.opendocument.text" />
-			</intent-filter>
-
-			<intent-filter>
-				<action android:name="android.intent.action.VIEW" />
-				<category android:name="android.intent.category.DEFAULT" />
-				<data android:mimeType="application/vnd.oasis.opendocument.spreadsheet" />
-			</intent-filter>
-
-			<intent-filter>
-				<action android:name="android.intent.action.VIEW" />
-				<category android:name="android.intent.category.BROWSABLE" />
-				<data android:mimeType="application/vnd.oasis.opendocument.spreadsheet" />
-			</intent-filter>
-
-			<intent-filter>
-				<action android:name="android.intent.action.VIEW" />
-				<category android:name="android.intent.category.DEFAULT" />
-				<data android:mimeType="application/vnd.oasis.opendocument.text-template" />
-			</intent-filter>
-
-			<intent-filter>
-				<action android:name="android.intent.action.VIEW" />
-				<category android:name="android.intent.category.BROWSABLE" />
-				<data android:mimeType="application/vnd.oasis.opendocument.text-template" />
-			</intent-filter>
-
-			<intent-filter>
-				<action android:name="android.intent.action.VIEW" />
-				<category android:name="android.intent.category.DEFAULT" />
-				<data android:mimeType="application/vnd.oasis.opendocument.spreadsheet-template" />
-			</intent-filter>
-
-			<intent-filter>
-				<action android:name="android.intent.action.VIEW" />
-				<category android:name="android.intent.category.BROWSABLE" />
-				<data android:mimeType="application/vnd.oasis.opendocument.spreadsheet-template" />
-			</intent-filter>
-
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
-		</activity>
-
-		<activity android:name=".ui.activity.DocumentActivity"
-			android:label="@string/app_name" android:configChanges="orientation|keyboardHidden" />
-
-		<provider android:name=".background.openoffice.ImageProvider"
-			android:authorities="at.tomtasche.reader" />
-
-		<service android:name="at.tomtasche.reader.background.service.DocumentService" />
-	</application>
-
-	<permission android:name="at.tomtasche.reader.DOCUMENT_CHANGED"
-		android:protectionLevel="signature" />
-
-	<uses-permission android:name="at.tomtasche.reader.DOCUMENT_CHANGED" />
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-	<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="13" />
-
-	<supports-screens android:resizeable="true"
-		android:smallScreens="true" android:normalScreens="true"
-		android:largeScreens="true" android:xlargeScreens="true"
-		android:anyDensity="true" />
 </manifest>
