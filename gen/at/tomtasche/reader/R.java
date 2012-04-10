@@ -11,14 +11,25 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int chart=0x7f020000;
+        public static final int dir_empty=0x7f020001;
+        public static final int dir_full=0x7f020002;
+        public static final int file=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int ic_menu_back=0x7f020005;
+        public static final int ic_menu_forward=0x7f020006;
+        public static final int love=0x7f020007;
     }
     public static final class id {
-        public static final int document=0x7f050000;
-        public static final int files=0x7f050001;
+        public static final int document=0x7f050003;
+        public static final int files=0x7f050002;
+        public static final int list_image=0x7f050000;
+        public static final int list_text=0x7f050001;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
+        public static final int list_item_chooser=0x7f030000;
+        public static final int list_item_pages=0x7f030001;
+        public static final int main=0x7f030002;
     }
     public static final class string {
         public static final int app_name=0x7f040001;

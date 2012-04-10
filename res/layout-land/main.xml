@@ -7,16 +7,17 @@
     <fragment
         android:id="@+id/files"
         android:name="at.tomtasche.reader.widget.FileFragment"
-        android:layout_width="0px"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
-
-    <fragment
-        android:id="@+id/document"
-        android:name="at.tomtasche.reader.widget.DocumentFragment"
         android:layout_width="0dip"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
+        android:tag="files" />
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/document"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         android:background="?android:attr/detailsElementBackground" />
 
 </LinearLayout>
